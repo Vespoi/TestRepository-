@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<div class="alert-box" id="alert">
+			<p id="title">alertbox</p>
+			<!--<button onclick="controlAlert('none')">close</button>--->
+			<button id="closeButton">close</button>
+		</div>		
+		<button onclick="controlAlert('Enter Id','block')">button1</button>
+		<button onclick="controlAlert('Enter Password','block')">button2</button>
+		
+		<script>
+		
+			document.getElementById("closeButton").addEventListener('click', function(){
+				document.getElementById("alert").style.display="none";
+			});
+		
+			function controlAlert(text,option){
+				document.getElementById("title").innerHTML=text;
+				document.getElementById("alert").style.display=option;
+			}
+			
+		</script>
+	</body>
+</html>
